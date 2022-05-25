@@ -27,7 +27,7 @@ steps:
 - name: 'gcr.io/$PROJECT_ID/kfp-cli-vertex'
   args:
   - '-c'
-  - 'dsl-compile-v2 --py pipeline.py --output covertype_kfp_pipeline.json'
+  - dsl-compile-v2 --py pipeline.py --output covertype_kfp_pipeline.json
   env:
   - 'PIPELINE_ROOT=gs://$PROJECT_ID-kfp-artifact-store/pipeline'
   - 'PROJECT_ID=$PROJECT_ID'
